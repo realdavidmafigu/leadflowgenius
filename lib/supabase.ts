@@ -11,12 +11,18 @@ if (!supabaseUrl || !supabaseAnonKey) {
   throw new Error('Missing Supabase environment variables');
 }
 
+// Log the actual URL being used (for debugging)
+console.log('[SUPABASE] Client initialized with URL:', supabaseUrl);
+console.log('[SUPABASE] Environment check:', {
+  hasEnvUrl: !!process.env.NEXT_PUBLIC_SUPABASE_URL,
+  hasEnvKey: !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+  actualUrl: supabaseUrl
+});
+
 export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   auth: {
     autoRefreshToken: true,
     persistSession: true,
     detectSessionInUrl: true
   }
-});
-
-console.log('[SUPABASE] Client initialized with URL:', supabaseUrl); 
+}); 
