@@ -1,0 +1,154 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [
+      {
+        "source": "/media",
+        "destination": "/api/media",
+        "regex": "^/media(?:/)?$"
+      }
+    ],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/api/funnels/[id]",
+      "regex": "^/api/funnels/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/funnels/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/builder/[id]",
+      "regex": "^/builder/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/builder/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/dashboard/crm/clients/[id]",
+      "regex": "^/dashboard/crm/clients/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/dashboard/crm/clients/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/dashboard/crm/invoice/[id]/preview",
+      "regex": "^/dashboard/crm/invoice/([^/]+?)/preview(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/dashboard/crm/invoice/(?<nxtPid>[^/]+?)/preview(?:/)?$"
+    },
+    {
+      "page": "/pay/[paymentLink]",
+      "regex": "^/pay/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPpaymentLink": "nxtPpaymentLink"
+      },
+      "namedRegex": "^/pay/(?<nxtPpaymentLink>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/auth/login",
+      "regex": "^/auth/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/auth/login(?:/)?$"
+    },
+    {
+      "page": "/auth/signup",
+      "regex": "^/auth/signup(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/auth/signup(?:/)?$"
+    },
+    {
+      "page": "/dashboard",
+      "regex": "^/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard(?:/)?$"
+    },
+    {
+      "page": "/dashboard/crm",
+      "regex": "^/dashboard/crm(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/crm(?:/)?$"
+    },
+    {
+      "page": "/dashboard/crm/clients",
+      "regex": "^/dashboard/crm/clients(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/crm/clients(?:/)?$"
+    },
+    {
+      "page": "/dashboard/crm/invoice/new",
+      "regex": "^/dashboard/crm/invoice/new(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/crm/invoice/new(?:/)?$"
+    },
+    {
+      "page": "/dashboard/crm/invoices",
+      "regex": "^/dashboard/crm/invoices(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/crm/invoices(?:/)?$"
+    },
+    {
+      "page": "/dashboard/crm/payments",
+      "regex": "^/dashboard/crm/payments(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/crm/payments(?:/)?$"
+    },
+    {
+      "page": "/dashboard/crm/products",
+      "regex": "^/dashboard/crm/products(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/crm/products(?:/)?$"
+    },
+    {
+      "page": "/dashboard/crm/profile",
+      "regex": "^/dashboard/crm/profile(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard/crm/profile(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "Next-Router-Segment-Prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

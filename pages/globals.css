@@ -1,0 +1,15 @@
+@import "@fontsource/montserrat/400.css";
+@import "@fontsource/montserrat/700.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/700.css";
+@import "tailwindcss";
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F9FAFB;
+  color: #1F2937;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+} 
