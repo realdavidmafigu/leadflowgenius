@@ -1,7 +1,7 @@
 {
   "/_app": "pages/_app.js",
-  "/api/business-profile": "pages/api/business-profile.js",
   "/_error": "pages/_error.js",
+  "/api/business-profile": "pages/api/business-profile.js",
   "/api/clients": "pages/api/clients.js",
   "/api/create-funnel": "pages/api/create-funnel.js",
   "/api/funnels": "pages/api/funnels.js",
@@ -28,7 +28,7 @@
   "/dashboard/crm/profile": "pages/dashboard/crm/profile.html",
   "/": "pages/index.html",
   "/pay/[paymentLink]": "pages/pay/[paymentLink].html",
-  "/_document": "pages/_document.js",
   "/api/upload-proof": "pages/api/upload-proof.js",
+  "/_document": "pages/_document.js",
   "/404": "pages/404.html"
 }
